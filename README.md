@@ -10,12 +10,8 @@ This is an example of a python script including:
 
 Python 2 or 3
 
-**Run**
+**Run it**
 
 ```bash
-python FileAdder.py resources/A.txt
+python FileAdder.py A.txt
 ```
-
-
-
-
