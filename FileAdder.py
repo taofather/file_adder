@@ -7,8 +7,8 @@ params = {"total": 0, "folder": "resources"}
 
 
 def file_sum(path):
-    file = open(params['folder'] + '/' + path, 'r')
-    for line in file.readlines():
+    file_o = open(params['folder'] + '/' + path, 'r')
+    for line in file_o.readlines():
         # sanitize
         text = str.strip(line)
 
