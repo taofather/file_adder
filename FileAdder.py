@@ -6,7 +6,7 @@ args = parser.parse_args()
 params = {"total": 0, "folder": "resources"}
 
 
-def file_sum(path, params):
+def file_sum(path):
     file = open(params['folder'] + '/' + path, 'r')
     for line in file.readlines():
         # sanitize
@@ -15,8 +15,8 @@ def file_sum(path, params):
         if text.isdigit():
             params['total'] += int(text)
         else:
-            file_sum(text, params)
+            file_sum(text)
 
 
-file_sum(args.path[0], params)
+file_sum(args.path[0])
 print 'Total is ' + str(params['total'])
