@@ -1,4 +1,5 @@
 import argparse
+import os.path
 
 parser = argparse.ArgumentParser(description='Parse a file.')
 parser.add_argument('path', metavar='path', nargs=1, help='the path of the file')
@@ -14,7 +15,7 @@ def file_sum(path):
 
         if text.isdigit():
             params['total'] += int(text)
-        else:
+        elif os.path.isfile(params['folder'] + '/' + text):
             file_sum(text)
 
 
